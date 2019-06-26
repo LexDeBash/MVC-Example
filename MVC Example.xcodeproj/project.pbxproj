@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		A86A4A4022C34B3800860A65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86A4A3F22C34B3800860A65 /* AppDelegate.swift */; };
-		A86A4A4222C34B3800860A65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86A4A4122C34B3800860A65 /* ViewController.swift */; };
+		A86A4A4222C34B3800860A65 /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86A4A4122C34B3800860A65 /* MealViewController.swift */; };
 		A86A4A4522C34B3800860A65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A86A4A4322C34B3800860A65 /* Main.storyboard */; };
 		A86A4A4722C34B3B00860A65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A86A4A4622C34B3B00860A65 /* Assets.xcassets */; };
 		A86A4A4A22C34B3B00860A65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A86A4A4822C34B3B00860A65 /* LaunchScreen.storyboard */; };
+		A86A4A5822C363C600860A65 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86A4A5722C363C600860A65 /* Meal.swift */; };
+		A86A4A5B22C3679100860A65 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86A4A5A22C3679100860A65 /* DataManager.swift */; };
+		A86A4A5D22C36C7300860A65 /* CellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86A4A5C22C36C7300860A65 /* CellController.swift */; };
+		A86A4A5F22C3B26400860A65 /* MealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86A4A5E22C3B26400860A65 /* MealDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A86A4A3C22C34B3800860A65 /* MVC Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVC Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A86A4A3F22C34B3800860A65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A86A4A4122C34B3800860A65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A86A4A4122C34B3800860A65 /* MealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
 		A86A4A4422C34B3800860A65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A86A4A4622C34B3B00860A65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A86A4A4922C34B3B00860A65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A86A4A4B22C34B3B00860A65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A86A4A5722C363C600860A65 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		A86A4A5A22C3679100860A65 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		A86A4A5C22C36C7300860A65 /* CellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellController.swift; sourceTree = "<group>"; };
+		A86A4A5E22C3B26400860A65 /* MealDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,66 @@
 		A86A4A3E22C34B3800860A65 /* MVC Example */ = {
 			isa = PBXGroup;
 			children = (
-				A86A4A3F22C34B3800860A65 /* AppDelegate.swift */,
-				A86A4A4122C34B3800860A65 /* ViewController.swift */,
-				A86A4A4322C34B3800860A65 /* Main.storyboard */,
-				A86A4A4622C34B3B00860A65 /* Assets.xcassets */,
-				A86A4A4822C34B3B00860A65 /* LaunchScreen.storyboard */,
-				A86A4A4B22C34B3B00860A65 /* Info.plist */,
+				A86A4A5222C34B6800860A65 /* App */,
+				A86A4A5322C34B7B00860A65 /* View Controllers */,
+				A86A4A5922C3676500860A65 /* Helpers */,
+				A86A4A5622C363B400860A65 /* Model */,
+				A86A4A5422C34B9000860A65 /* View */,
+				A86A4A5522C34B9900860A65 /* Resources */,
 			);
 			path = "MVC Example";
+			sourceTree = "<group>";
+		};
+		A86A4A5222C34B6800860A65 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A86A4A3F22C34B3800860A65 /* AppDelegate.swift */,
+				A86A4A4B22C34B3B00860A65 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A86A4A5322C34B7B00860A65 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A86A4A4122C34B3800860A65 /* MealViewController.swift */,
+				A86A4A5E22C3B26400860A65 /* MealDetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		A86A4A5422C34B9000860A65 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A86A4A4322C34B3800860A65 /* Main.storyboard */,
+				A86A4A4822C34B3B00860A65 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A86A4A5522C34B9900860A65 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A86A4A4622C34B3B00860A65 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A86A4A5622C363B400860A65 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A86A4A5722C363C600860A65 /* Meal.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A86A4A5922C3676500860A65 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A86A4A5A22C3679100860A65 /* DataManager.swift */,
+				A86A4A5C22C36C7300860A65 /* CellController.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +195,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A86A4A4222C34B3800860A65 /* ViewController.swift in Sources */,
+				A86A4A4222C34B3800860A65 /* MealViewController.swift in Sources */,
+				A86A4A5B22C3679100860A65 /* DataManager.swift in Sources */,
+				A86A4A5F22C3B26400860A65 /* MealDetailViewController.swift in Sources */,
+				A86A4A5822C363C600860A65 /* Meal.swift in Sources */,
 				A86A4A4022C34B3800860A65 /* AppDelegate.swift in Sources */,
+				A86A4A5D22C36C7300860A65 /* CellController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +348,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GBTTU32HS2;
-				INFOPLIST_FILE = "MVC Example/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MVC Example/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +366,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GBTTU32HS2;
-				INFOPLIST_FILE = "MVC Example/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MVC Example/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
