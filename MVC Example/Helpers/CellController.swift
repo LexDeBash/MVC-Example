@@ -8,11 +8,10 @@
 
 import UIKit
 
-class CellController {
-    
-    func configure(_ cell: UITableViewCell, with meal: Meal) {
-        cell.textLabel?.text = meal.name
-        cell.detailTextLabel?.text = meal.ratingBar
-        cell.imageView?.image = meal.photo
+class MealCell: UITableViewCell {
+    func configure(with meal: Meal) {
+        textLabel?.text = meal.name
+        detailTextLabel?.text = meal.ratingBar
+        imageView?.image = UIImage(named: meal.photo)
     }
 }

@@ -9,20 +9,14 @@
 import UIKit
 
 struct Meal {
-    
     var name: String
-    var photo: UIImage
+    var photo: String
     var notes: String
     var rating: Int
     var date: Date
     
-}
-
-// MARK: - Formatting
-extension Meal {
-    
     var ratingBar: String {
-        return String(repeating: "⭐️", count: rating)
+        String(repeating: "⭐️", count: rating)
     }
     
     var currentDate: String {
@@ -31,5 +25,16 @@ extension Meal {
         dateFormatter.timeStyle = .short
         dateFormatter.locale = Locale.current
         return dateFormatter.string(from: date)
+    }
+    
+}
+
+extension Meal {
+    static func getMeals() -> [Meal] {
+        [
+            Meal(name: "Первое", photo: "First", notes: "Суп", rating: 7, date: Date()),
+            Meal(name: "Второе", photo: "Second", notes: "Плоф", rating: 9, date: Date()),
+            Meal(name: "Третье", photo: "Third", notes: "Десерт", rating: 5, date: Date())
+        ]
     }
 }
