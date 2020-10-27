@@ -10,27 +10,15 @@ import UIKit
 
 class MealViewController: UIViewController {
     
-    // tied with view
     @IBOutlet var tableView: UITableView!
     
-    let cellController = CellController()
-    
-    // tied with model
-    private var meals: [Meal] = []
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        tableView.dataSource = self
-        meals = DataManager.shared.loadMeals()
-    }
+    private let meals = Meal.getMeals()
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "mealDetailSegue" else { return }
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
-        
+        guard let mealDetailVC = segue.destination as? MealDetailViewController else { return }
         let meal = meals[indexPath.row]
-        let mealDetailVC = segue.destination as! MealDetailViewController
         mealDetailVC.meal = meal
     }
 
@@ -39,14 +27,14 @@ class MealViewController: UIViewController {
 // MARK: - UITableViewDataSource
 extension MealViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return meals.count
+        meals.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "mealCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "mealCell", for: indexPath) as! MealCell
         
         let meal = meals[indexPath.row]
-        cellController.configure(cell, with: meal)
+        cell.configure(with: meal)
         
         return cell
     }

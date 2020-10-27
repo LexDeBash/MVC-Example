@@ -13,7 +13,6 @@
 		A86A4A4722C34B3B00860A65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A86A4A4622C34B3B00860A65 /* Assets.xcassets */; };
 		A86A4A4A22C34B3B00860A65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A86A4A4822C34B3B00860A65 /* LaunchScreen.storyboard */; };
 		A86A4A5822C363C600860A65 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86A4A5722C363C600860A65 /* Meal.swift */; };
-		A86A4A5B22C3679100860A65 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86A4A5A22C3679100860A65 /* DataManager.swift */; };
 		A86A4A5D22C36C7300860A65 /* CellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86A4A5C22C36C7300860A65 /* CellController.swift */; };
 		A86A4A5F22C3B26400860A65 /* MealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86A4A5E22C3B26400860A65 /* MealDetailViewController.swift */; };
 /* End PBXBuildFile section */
@@ -27,7 +26,6 @@
 		A86A4A4922C34B3B00860A65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A86A4A4B22C34B3B00860A65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A86A4A5722C363C600860A65 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
-		A86A4A5A22C3679100860A65 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		A86A4A5C22C36C7300860A65 /* CellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellController.swift; sourceTree = "<group>"; };
 		A86A4A5E22C3B26400860A65 /* MealDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,7 +116,6 @@
 		A86A4A5922C3676500860A65 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				A86A4A5A22C3679100860A65 /* DataManager.swift */,
 				A86A4A5C22C36C7300860A65 /* CellController.swift */,
 			);
 			path = Helpers;
@@ -151,7 +148,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Alexey Efimov";
 				TargetAttributes = {
 					A86A4A3B22C34B3800860A65 = {
@@ -196,7 +193,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A86A4A4222C34B3800860A65 /* MealViewController.swift in Sources */,
-				A86A4A5B22C3679100860A65 /* DataManager.swift in Sources */,
 				A86A4A5F22C3B26400860A65 /* MealDetailViewController.swift in Sources */,
 				A86A4A5822C363C600860A65 /* Meal.swift in Sources */,
 				A86A4A4022C34B3800860A65 /* AppDelegate.swift in Sources */,
@@ -252,6 +248,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -313,6 +310,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
