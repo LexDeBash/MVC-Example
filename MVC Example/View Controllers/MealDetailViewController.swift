@@ -26,7 +26,6 @@ class MealDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         upadateUI(with: view.bounds.size)
     }
     
@@ -40,6 +39,10 @@ class MealDetailViewController: UIViewController {
 // MARK: - Private Methods
 extension MealDetailViewController {
     
+    /// Update UI with axis mode
+    /// - Parameter size: Set to super view size
+    /// 
+    /// This method change UI with current orientation of the Device
     private func upadateUI(with size: CGSize) {
         let isVertical = size.width < size.height
         mealStackView.axis = isVertical ? .vertical : .horizontal
