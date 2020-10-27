@@ -11,8 +11,12 @@ import UIKit
 class MealDetailViewController: UIViewController {
 
     @IBOutlet var mealStackView: UIStackView!
-    
-    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var imageView: UIImageView! {
+        didSet {
+            imageView.contentMode = .scaleToFill
+            imageView.layer.cornerRadius = 50
+        }
+    }
     
     @IBOutlet var mealRatingLabel: UILabel!
     @IBOutlet var mealNotesLabel: UILabel!
@@ -42,7 +46,7 @@ extension MealDetailViewController {
         mealStackView.axis = isVertical ? .vertical : .horizontal
         
         title = meal.name
-        imageView.image = meal.photo
+        imageView.image = UIImage(named: meal.photo)
         mealRatingLabel.text = meal.ratingBar
         mealNotesLabel.text = meal.notes
         mealDateLabel.text = meal.currentDate
