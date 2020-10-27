@@ -6,7 +6,7 @@
 //  Copyright © 2019 Alexey Efimov. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 struct Meal {
     var name: String
