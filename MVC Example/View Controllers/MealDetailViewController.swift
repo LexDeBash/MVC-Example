@@ -32,7 +32,6 @@ class MealDetailViewController: UIViewController {
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
-        
         upadateUI(with: size)
     }
 
