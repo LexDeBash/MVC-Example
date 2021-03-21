@@ -21,7 +21,6 @@ class MealViewController: UIViewController {
         let meal = meals[indexPath.row]
         mealDetailVC.meal = meal
     }
-
 }
 
 // MARK: - UITableViewDataSource
